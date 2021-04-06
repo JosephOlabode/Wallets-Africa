@@ -10,6 +10,7 @@ import { SendMoneyComponent } from './send-money/send-money.component';
 import { RequestMoneyComponent } from './request-money/request-money.component';
 import { AirtimeComponent } from './airtime/airtime.component';
 import { BillsComponent } from './bills/bills.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BillsComponent } from './bills/bills.component';
     SendMoneyComponent,
     RequestMoneyComponent,
     AirtimeComponent,
-    BillsComponent
+    BillsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
