@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
 import { SendMoneyComponent } from './send-money/send-money.component';
 import { RequestMoneyComponent } from './request-money/request-money.component';
+import { AirtimeComponent } from './airtime/airtime.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RequestMoneyComponent } from './request-money/request-money.component';
     DashboardComponent,
     UsersComponent,
     SendMoneyComponent,
-    RequestMoneyComponent
+    RequestMoneyComponent,
+    AirtimeComponent
   ],
   imports: [
     BrowserModule,
