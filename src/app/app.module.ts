@@ -12,6 +12,7 @@ import { AirtimeComponent } from './airtime/airtime.component';
 import { BillsComponent } from './bills/bills.component';
 import { CardComponent } from './card/card.component';
 import { ReportsComponent } from './reports/reports.component';
+import { DocumentationComponent } from './documentation/documentation.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ReportsComponent } from './reports/reports.component';
     AirtimeComponent,
     BillsComponent,
     CardComponent,
-    ReportsComponent
+    ReportsComponent,
+    DocumentationComponent
   ],
   imports: [
     BrowserModule,
