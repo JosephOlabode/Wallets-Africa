@@ -13,6 +13,11 @@ import { BillsComponent } from './bills/bills.component';
 import { CardComponent } from './card/card.component';
 import { ReportsComponent } from './reports/reports.component';
 import { DocumentationComponent } from './documentation/documentation.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,12 @@ import { DocumentationComponent } from './documentation/documentation.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
