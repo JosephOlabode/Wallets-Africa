@@ -7,13 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
 import { SendMoneyComponent } from './send-money/send-money.component';
+import { RequestMoneyComponent } from './request-money/request-money.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     UsersComponent,
-    SendMoneyComponent
+    SendMoneyComponent,
+    RequestMoneyComponent
   ],
   imports: [
     BrowserModule,
