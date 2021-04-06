@@ -11,6 +11,7 @@ import { RequestMoneyComponent } from './request-money/request-money.component';
 import { AirtimeComponent } from './airtime/airtime.component';
 import { BillsComponent } from './bills/bills.component';
 import { CardComponent } from './card/card.component';
+import { ReportsComponent } from './reports/reports.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CardComponent } from './card/card.component';
     RequestMoneyComponent,
     AirtimeComponent,
     BillsComponent,
-    CardComponent
+    CardComponent,
+    ReportsComponent
   ],
   imports: [
     BrowserModule,
