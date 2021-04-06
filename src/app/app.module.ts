@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
+import { SendMoneyComponent } from './send-money/send-money.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    UsersComponent
+    UsersComponent,
+    SendMoneyComponent
   ],
   imports: [
     BrowserModule,
