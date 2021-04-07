@@ -516,32 +516,40 @@
 <router-outlet></router-outlet>
 -->
 
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <button mat-icon-button>
-      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-    </button>
-    <!--<h1>SimpleCRM</h1>
-    <span class="menu-spacer"></span>
-    <div>
-      <a mat-button [routerLink]="'/accounts'"> Accounts </a>
-      <a mat-button [routerLink]="'/create-account'"> Create Account </a>
-      <a mat-button [routerLink]="'/contacts'"> Contacts </a>
-      <a mat-button [routerLink]="'/create-contact'"> Create Contact </a>
-      <a mat-button [routerLink]="'/activities'"> Activities </a>
-      <a mat-button [routerLink]="'/create-activity'"> Create Activity </a>
+<!--<mat-sidenav-container>
+  <mat-sidenav #sidenav opened>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="'/dashboard'"> Dashboard </a>
+      <a mat-list-item [routerLink]="'/send-money'"> Send Money</a>
+      <a mat-list-item [routerLink]="'/request-money'"> Request Money </a>
+      <a mat-list-item [routerLink]="'/buy-airtime'"> Buy Airtime </a>
+      <a mat-list-item [routerLink]="'/pay-bills'"> Pay Bills</a>
+      <a mat-list-item [routerLink]="'/card'"> Card </a>
+      <a mat-list-item [routerLink]="'/reports'"> Report</a>
+      <a mat-list-item [routerLink]="'/api-documentation'"> Api Documentation </a>
+      &lt;!&ndash;<a mat-list-item (click)="sidenav.toggle()" href="" >Close</a>&ndash;&gt;
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 100vh;">
+      <mat-toolbar color="primary" class="mat-elevation-z3">
+        <mat-toolbar-row>
+          <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+          </button>
+          <mat-toolbar-row>
+            <span style="font-size: 14px;">Hello, Enterprise Wallet Payment Salary Account</span>
+          </mat-toolbar-row>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>-->
 
-    </div>-->
-    <mat-toolbar-row>
-      <span style="font-size: 14px;">Hello, Enterprise Wallet Payment Salary Account</span>
-    </mat-toolbar-row>
-  </mat-toolbar-row>
 
-
-</mat-toolbar>
-
-<mat-sidenav-container>
-  <mat-sidenav #sidenav>
+<!--<mat-sidenav-container >
+  <mat-sidenav #sidenav mode="side" >
     <mat-nav-list>
       <a mat-list-item [routerLink]="'/dashboard'"> Dashboard </a>
       <a mat-list-item [routerLink]="'/send-money'"> Send Money</a>
@@ -554,10 +562,82 @@
       <a mat-list-item (click)="sidenav.toggle()" href="" >Close</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <div style="height: 88vh;">
 
-      <router-outlet></router-outlet>
+  <mat-sidenav-content>
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <mat-toolbar-row>
+        <span style="font-size: 14px;">Hello, Enterprise Wallet Payment Salary Account</span>
+      </mat-toolbar-row>
+    </mat-toolbar-row>
+  </mat-sidenav-content>
+</mat-sidenav-container>-->
+<!--<div class="row">
+  <div class=" col-lg-3 col-md-12 col-sm-12 mb-3">
+    <div class="card text-center " style="border-radius: 0; height: 100vh">
+      <div class="card-body ">
+        <ul class="list-group">
+          <li class="list-group-item"><a [routerLink]="'/dashboard'"> Dashboard </a></li>
+
+          <li class="list-group-item"><a mat-list-item [routerLink]="'/send-money'"> Send Money</a></li>
+          <li class="list-group-item"><a mat-list-item [routerLink]="'/request-money'"> Request Money </a></li>
+          <li class="list-group-item"><a mat-list-item [routerLink]="'/buy-airtime'"> Buy Airtime </a></li>
+          <li class="list-group-item"><a mat-list-item [routerLink]="'/pay-bills'"> Pay Bills</a></li>
+          <li class="list-group-item"><a mat-list-item [routerLink]="'/card'"> Card </a></li>
+          <li class="list-group-item"><a mat-list-item [routerLink]="'/reports'"> Report</a></li>
+          <li class="list-group-item"><a mat-list-item [routerLink]="'/api-documentation'"> Api Documentation </a></li>
+        </ul>
+      </div>
     </div>
+  </div>
+  <div class="col-sm-12 col-lg-9 col-md-12">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+<mat-sidenav-container class="example-container" style="height: 100vh" >
+  <mat-sidenav mode="side" opened #sidenav style="background: #5C2799;">
+    <mat-nav-list >
+      <a class="link" mat-list-item [routerLink]="'/dashboard'"> Dashboard </a>
+      <a class="link" mat-list-item [routerLink]="'/send-money'"> Send Money</a>
+      <a class="link" mat-list-item [routerLink]="'/request-money'"> Request Money </a>
+      <a class="link" mat-list-item [routerLink]="'/buy-airtime'"> Buy Airtime </a>
+      <a class="link" mat-list-item [routerLink]="'/pay-bills'"> Pay Bills</a>
+      <a class="link" mat-list-item [routerLink]="'/card'"> Card </a>
+      <a class="link" mat-list-item [routerLink]="'/reports'"> Report</a>
+      <a class="link" mat-list-item [routerLink]="'/api-documentation'"> Api Documentation </a>
+      <!--<a mat-list-item (click)="sidenav.toggle()" href="" >Close</a>-->
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="mat-elevation-z3" style="background: #ffffff;">
+      <mat-toolbar-row>
+        <button mat-icon-button>
+          <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        </button>
+        <mat-toolbar-row>
+          <span style="font-size: 14px; color: #5C2799">Hello, Enterprise Wallet Payment Salary Account</span>
+        </mat-toolbar-row>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+
