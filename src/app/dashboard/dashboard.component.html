@@ -1,1 +1,92 @@
-<p>dashboard works!</p>
+<div class="container">
+  <div class="row mb-5 mt-3">
+    <div class="col-sm-4">
+      <div class="card mat-elevation-z3" style="background: #011627;" >
+        <div class="card-body" >
+          <div class="row">
+            <div class="col-sm text-center" >
+              <span class= "title" style="text-align: left;">YOUR WALLET BALANCE</span><br>
+              <span style="color: #00C9B6; font-size: 36px;line-height: 43px;letter-spacing: 0em;text-align: left;">&#8358;150,000,000.88</span><br/><br/>
+              <span style="">
+                <div class="row">
+                  <div class="col-sm">
+                    <button class="icon-button"><span class="icon-button-text">0003480384 <i class="fa fa-info-circle" style="font-size: 14px"></i></span></button>
+                  </div>
+                  <div class="col-sm">
+
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="card mat-elevation-z3">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm text-center" style="border-right: 1px solid grey">
+              <h6 class="title">TRANSACTIONS</h6><br>
+               <h4 class="content">580</h4>
+            </div>
+            <div class="col-sm text-center" style="border-right: 1px solid grey">
+              <h6 class="title">AMOUNT SPENT</h6><br>
+              <!--'en-Us'-->
+              <h4 class="content">12m</h4>
+            </div>
+            <div class="col-sm text-center">
+              <h6 class="title">AMOUNT RECEIVED</h6><br>
+              <h4 class="content">34m</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--<div class="row mb-4">
+      <div class="col-sm">
+
+      </div>
+    </div>-->
+    <!--<div class="row">
+      <div class="col-sm">
+        <div class="card">
+          <div class="card-header">
+            <h5>TO-DOS({{jobs.length}})</h5>
+          </div>
+          <div class="card-body" style="height: 550px; overflow-y: auto; font-family: Ubuntu, sans-serif">
+            <div class="row">
+              <div class="col-sm-9"><h6>Jobs</h6></div>
+              <div class="col-sm-3"><h6>Delivery Time <br/>(dd : hh : mm : ss)</h6>
+              </div>
+            </div>
+            <hr/>
+            <span *ngFor="let job of jobs">
+                <div class="row" *ngIf="job.sellers.length > 0">
+                  <div class="col-sm-1">
+                    <i class="fa fa-archive" style="color: #3F51B5; font-size: 30px"></i>
+                  </div>
+                  <div class="col-sm-8">
+                    <span class="text-truncate" mdbTooltip="Click to View Business Detail"><a (click)="openTodoModal(job, todoModal)" style="color: #3F51B5; cursor: pointer">{{job.sellers[0].task}}</a></span><br/>
+                    <span class="text-capitalize text-muted">By: {{job.creator}}</span>&nbsp;&nbsp;
+                    <span class="text-muted">For: &#8358;{{job.sellers[0].amount.toLocaleString('en-Us')}}</span>
+                  </div>
+                  <div class="col-sm-3">
+                    &lt;!&ndash;Timer Display&ndash;&gt;
+                    <h6 *ngIf="!compareDate(job.sellers[0].deliveryDate)" class="text-muted mt-2">&lt;!&ndash;{{getTimeLeft(job.sellers[0].deliveryDate)}}&ndash;&gt;
+                      <countdown-timer [end]="getTimeLeft(job.sellers[0].deliveryDate)" style="font-size:20px"></countdown-timer>
+                    </h6>
+                    &lt;!&ndash;Delivery Button&ndash;&gt;
+                    <button mat-raised-button  color="primary" *ngIf="compareDate(job.sellers[0].deliveryDate)" style="font-family: Ubuntu, sans-serif" (click)="makeDelivery(job.creator, job._id, job.sellers[0].bitId)">Deliver Now</button>
+                  </div>
+                </div>
+                <hr/>
+              </span>
+
+
+          </div>
+        </div>
+      </div>
+    </div>-->
+    </div>
+  </div>
+</div>

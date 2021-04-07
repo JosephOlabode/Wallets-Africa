@@ -622,14 +622,13 @@
       <a class="link" mat-list-item [routerLink]="'/card'"> Card </a>
       <a class="link" mat-list-item [routerLink]="'/reports'"> Report</a>
       <a class="link" mat-list-item [routerLink]="'/api-documentation'"> Api Documentation </a>
-      <!--<a mat-list-item (click)="sidenav.toggle()" href="" >Close</a>-->
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="mat-elevation-z3" style="background: #ffffff;">
       <mat-toolbar-row>
         <button mat-icon-button>
-          <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+          <mat-icon (click)="sidenav.toggle()" style="color: #5C2799;">menu</mat-icon>
         </button>
         <mat-toolbar-row>
           <span style="font-size: 14px; color: #5C2799">Hello, Enterprise Wallet Payment Salary Account</span>
