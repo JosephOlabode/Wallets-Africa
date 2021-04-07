@@ -615,12 +615,50 @@
   <mat-sidenav mode="side" opened #sidenav style="background: #5C2799;">
     <mat-nav-list >
       <a class="link" mat-list-item [routerLink]="'/dashboard'"> Dashboard </a>
-      <a class="link" mat-list-item [routerLink]="'/send-money'"> Send Money</a>
+      <a class="link" mat-list-item [routerLink]="'/send-money'">
+        Send Money
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voice mail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+      </a>
       <a class="link" mat-list-item [routerLink]="'/request-money'"> Request Money </a>
       <a class="link" mat-list-item [routerLink]="'/buy-airtime'"> Buy Airtime </a>
       <a class="link" mat-list-item [routerLink]="'/pay-bills'"> Pay Bills</a>
       <a class="link" mat-list-item [routerLink]="'/card'"> Card </a>
-      <a class="link" mat-list-item [routerLink]="'/reports'"> Report</a>
+      <a class="link" mat-list-item [routerLink]="'/reports'">
+        Reports
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voice mail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+      </a>
       <a class="link" mat-list-item [routerLink]="'/api-documentation'"> Api Documentation </a>
     </mat-nav-list>
   </mat-sidenav>
@@ -633,8 +671,27 @@
         <mat-toolbar-row>
           <span style="font-size: 14px; color: #5C2799">Hello, Enterprise Wallet Payment Salary Account</span>
         </mat-toolbar-row>
-        <mat-toolbar-row class="text-right" style="border-right: 1px solid grey; height: 25px; margin-left: 580px">
+        <mat-toolbar-row class="text-right" style=" margin-left: 500px; margin-right: 0">
           <img src="../assets/me.jpg" alt="userImage" class="rounded-circle float-lg-left" style="height: 48px; width: 48px;"/>
+        </mat-toolbar-row>
+        <mat-toolbar-row style="border-right: 1px solid grey; height: 25px;">
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>Redial</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>Check voice mail</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+            </button>
+          </mat-menu>
         </mat-toolbar-row>
         <mat-toolbar-row>
           <span><a (click)="logOut()" style="cursor:pointer">Logout</a></span>
