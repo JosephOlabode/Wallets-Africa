@@ -633,6 +633,12 @@
         <mat-toolbar-row>
           <span style="font-size: 14px; color: #5C2799">Hello, Enterprise Wallet Payment Salary Account</span>
         </mat-toolbar-row>
+        <mat-toolbar-row class="text-right" style="border-right: 1px solid grey; height: 25px; margin-left: 580px">
+          <img src="../assets/me.jpg" alt="userImage" class="rounded-circle float-lg-left" style="height: 48px; width: 48px;"/>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+          <span><a (click)="logOut()" style="cursor:pointer">Logout</a></span>
+        </mat-toolbar-row>
       </mat-toolbar-row>
     </mat-toolbar>
     <router-outlet></router-outlet>
