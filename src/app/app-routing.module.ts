@@ -46,7 +46,8 @@ const routes: Routes = [
   {
     path: 'api-documentation',
     component: DocumentationComponent
-  }
+  },
+  {path: '', redirectTo: 'dashboard', pathMatch: 'full'}
 ];
 
 @NgModule({
