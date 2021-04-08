@@ -9,7 +9,7 @@ import { UsersComponent } from './users/users.component';
 import { SendMoneyComponent } from './send-money/send-money.component';
 import { RequestMoneyComponent } from './request-money/request-money.component';
 import { AirtimeComponent } from './airtime/airtime.component';
-import { BillsComponent } from './bills/bills.component';
+import { BillsComponent } from './_shared/pipes/bills/bills.component';
 import {CardComponent} from './card/card.component';
 import { ReportsComponent } from './reports/reports.component';
 import { DocumentationComponent } from './documentation/documentation.component';
@@ -28,7 +28,7 @@ import {MatInputModule} from '@angular/material/input';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CustomDatePipePipe } from './_shared/pipes/custom-date-pipe.pipe';
 import { SettingsComponent } from './settings/settings.component';
-import { CardPipePipe } from './_shared/pipe/card-pipe.pipe';
+import { CardPipePipe } from './_shared/pipes/card-pipe.pipe';
 
 @NgModule({
   declarations: [
