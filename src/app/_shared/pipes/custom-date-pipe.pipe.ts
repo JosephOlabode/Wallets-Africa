@@ -12,9 +12,9 @@ export class CustomDatePipePipe implements PipeTransform {
 
   // tslint:disable-next-line:typedef
   transform(value: string) {
-    const cleanedString = value.substring(0, value.indexOf(' '));
+    const cleanedDate = value.substring(0, value.indexOf(' '));
     const datePipe = new DatePipe('en-US');
-    return datePipe.transform(cleanedString, 'dd/MM/yyyy');
+    return datePipe.transform(cleanedDate, 'dd/MM/yyyy');
   }
 
 }
