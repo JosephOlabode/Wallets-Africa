@@ -1,13 +1,17 @@
-import {Inject, Component, OnInit, AfterViewInit, ElementRef} from '@angular/core';
+import {Inject, Component, OnInit, AfterViewInit, ElementRef, TemplateRef, Input, AfterViewChecked} from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit, AfterViewInit {
-
+export class DashboardComponent implements OnInit, AfterViewInit, AfterViewChecked{
   constructor(private modalService: NgbModal, private elRef: ElementRef) {}
+  @Input() longContent!: TemplateRef<any>;
+  ngAfterViewChecked(): void {
+        // throw new Error('Method not implemented.');
+    this.openLg(this.longContent);
+  }
   ngOnInit(): void {
   }
 
@@ -17,9 +21,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    /*const div = this.elRef.nativeElement.querySelector('ng-template');
-    this.openLg(div);*/
-  }
 
+  }
 }
 
