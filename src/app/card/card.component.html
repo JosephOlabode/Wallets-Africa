@@ -87,7 +87,7 @@
         <th scope="row">{{ i + 1 }}</th>
         <td>{{transaction.narration}}</td>
         <td>{{transaction.amount | currency: selectedCard.cardCurrency }}</td>
-        <td>{{transaction.transactionDate.substring(0, transaction.transactionDate.indexOf(' ')) | date: 'dd/MM/yyyy'}}</td>
+        <td>{{transaction.transactionDate | customDatePipe}}</td>
       </tr>
       </tbody>
     </table>
