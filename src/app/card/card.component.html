@@ -39,12 +39,12 @@
                       <div class="col-sm-6">
                         <img *ngIf= "card.cardType.toLowerCase() == 'verve'" src="assets/verve%20logo.png" style="background-color: #FFFFFF"/>
                         <img *ngIf= "card.cardType.toLowerCase() == 'visa'" src="assets/visa-curved-min.jpg" style="background-color: #FFFFFF"/>
-                        <img *ngIf= "card.cardType.toLowerCase() == 'mastercard'" src="assets/Master-Card-Blue-icon.jpg" style="background-color: #FFFFFF"/>
+                        <img *ngIf= "card.cardType.toLowerCase() == 'mastercard'" src="assets/master.jpg" style="background-color: #FFFFFF"/>
                       </div>
                     </div>
                   </div>
                 </div><br/>
-                <a routerLink="" style="margin-left: 5px; color: #5C2799">View Details</a>
+                <a (click)="initialize(card, longContent)" style="margin-left: 5px; color: #5C2799; text-decoration: none; cursor: pointer">View Details</a>
               </div>
               <div class="col-sm-1 mt-1 classWithPad">
                 <button mat-button style="background: #5C2799; color: #FFFFFF;">Fund Card</button>
@@ -57,9 +57,44 @@
               </div>
             </div>
           </div>
-
         </mat-tab>
       </mat-tab-group>
     </div>
   </div>
 </div>
+
+<ng-template #longContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Card Transactions</p>
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">BILLER</th>
+        <th scope="col">AMOUNT</th>
+        <th scope="col">DATE</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of selectedCard.transactions; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{transaction.narration}}</td>
+        <td>{{transaction.amount | currency: selectedCard.cardCurrency }}</td>
+        <td>{{transaction.transactionDate.substring(0, transaction.transactionDate.indexOf(' ')) | date: 'dd/MM/yyyy'}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+<!--<button class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(longContent)">Large modal</button>-->
+
