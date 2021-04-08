@@ -28,6 +28,7 @@ import {MatInputModule} from '@angular/material/input';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CustomDatePipePipe } from './_shared/pipes/custom-date-pipe.pipe';
 import { SettingsComponent } from './settings/settings.component';
+import { CardPipePipe } from './_shared/pipe/card-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SettingsComponent } from './settings/settings.component';
     ReportsComponent,
     DocumentationComponent,
     CustomDatePipePipe,
-    SettingsComponent
+    SettingsComponent,
+    CardPipePipe
   ],
   imports: [
     BrowserModule,
