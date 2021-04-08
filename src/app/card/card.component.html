@@ -14,7 +14,7 @@
     <div class="col-sm">
       <mat-tab-group>
         <mat-tab label="Virtual Cards" > Virtual Card Content</mat-tab>
-        <mat-tab label="Physical Cards">
+        <mat-tab label="Physical Cards" class="mb-3">
           <div class="row mx-auto pt-4 pb-0">
             <div class="col-lg-6 col-md-6 col-sm-10">
               <mat-form-field appearance="outline" style=" font-family: Ubuntu, sans-serif; width: 250px;" class="rounded-top">
@@ -64,14 +64,53 @@
 </div>
 
 <ng-template #longContent let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title">Modal title</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
   <div class="modal-body">
-    <p>Card Transactions</p>
+    <div class="row">
+      <div class="col-sm">
+        <div class="card">
+          <div class="card-body modal-card">
+            <div class="row">
+              <div class="col-sm">
+                <img src="assets/wallet.svg"/>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm">
+                <span class="card-number">{{selectedCard.cardNumber}}</span>
+              </div>
+            </div>
+            <div class="row mt-3" style="color: #FFFFFF; font-family: serif">
+              <div class="col-sm">
+                <span>{{selectedCard.expiryMonth + '/' +selectedCard.expiryYear}}</span>
+              </div>
+              <div class="col-sm">
+                <span>{{selectedCard.cvv}}</span>
+              </div>
+            </div>
+            <div class="row mt-3" style="color: #FFFFFF; font-family: serif">
+              <div class="col-sm">
+                <span>{{selectedCard.cardName}}</span>
+              </div>
+              <div class="col-sm">
+                <img *ngIf= "selectedCard.cardType.toLowerCase() == 'verve'" src="assets/verve%20logo.png" style="background-color: #FFFFFF"/>
+                <img *ngIf= "selectedCard.cardType.toLowerCase() == 'visa'" src="assets/visa-curved-min.jpg" style="background-color: #FFFFFF"/>
+                <img *ngIf= "selectedCard.cardType.toLowerCase() == 'mastercard'" src="assets/master.jpg" style="background-color: #FFFFFF"/>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <span style="color: #5C2799">Card Balance</span><br/>
+        <span>{{selectedCard.cardBalance | currency: selectedCard.cardCurrency}}</span>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-sm">
+        <p style="color: #5C2799">Card Transactions</p>
+      </div>
+    </div>
 
     <table class="table table-striped">
       <thead>
@@ -92,9 +131,6 @@
       </tbody>
     </table>
   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-  </div>
+
 </ng-template>
-<!--<button class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(longContent)">Large modal</button>-->
 

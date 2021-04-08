@@ -1,4 +1,4 @@
-import {Inject, Component, OnInit, AfterViewInit} from '@angular/core';
+import {Inject, Component, OnInit, AfterViewInit, ElementRef} from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +7,7 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal, private elRef: ElementRef) {}
   ngOnInit(): void {
   }
 
@@ -17,6 +17,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    /*const div = this.elRef.nativeElement.querySelector('ng-template');
+    this.openLg(div);*/
   }
 
 }
