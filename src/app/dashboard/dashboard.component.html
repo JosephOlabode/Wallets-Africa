@@ -58,7 +58,7 @@
   </div>
   <div class="row">
     <div class="col-sm">
-      <div class="card mat-elevation-z3">
+      <div class="card mat-elevation-z3 p-3">
         <div class="card-body">
           <div class="row">
             <div class="col-sm transaction-title">Recent Transactions</div>
@@ -74,6 +74,7 @@
                 <th scope="col">CATEGORY</th>
                 <th scope="col">REFERENCE</th>
                 <th scope="col">NARRATION</th>
+                <th scope="col">AMOUNT</th>
               </tr>
               </thead>
               <tbody>
@@ -82,20 +83,10 @@
                 <td>{{transaction.category}}</td>
                 <td>{{ transaction.reference }}</td>
                 <td>{{transaction.narration}}</td>
+                <td>{{transaction.amount}}</td>
               </tr>
               </tbody>
             </table>
-
-            <!--<div class="d-flex justify-content-between p-2">
-              <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="refreshCountries()">
-              </ngb-pagination>
-
-              <select class="custom-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshCountries()">
-                <option [ngValue]="2">2 items per page</option>
-                <option [ngValue]="4">4 items per page</option>
-                <option [ngValue]="6">6 items per page</option>
-              </select>
-            </div>-->
           </div>
         </div>
       </div>
