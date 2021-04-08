@@ -1,7 +1,18 @@
 .card-button {
   height: 40px;
   width: 160px;
-  left: 1000px;
+  left: 900px;
+  top: 118px;
+  border-radius: 4px;
+  border: 1px solid #5C2799;
+  background-color: #FFFFFF;
+  color: #5C2799;
+}
+
+.card-btn {
+  height: 40px;
+  width: 160px;
+  left: 1180px;
   top: 118px;
   border-radius: 4px;
   border: 1px solid #5C2799;
@@ -12,6 +23,31 @@
 .card-text {
   font-size: 18px;
   line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.action-button {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0em;
+}
+
+.amount {
+  font-family: IBM Plex Mono,serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+}
+.classWithPad { margin:20px; padding:20px; }
+.card-code {
+  font-family: IBM Plex Mono, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
 }

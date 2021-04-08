@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row mt-5 mb-4">
-    <div class="col-sm-8">
-      <h4 class="card-text">Cards</h4>
+    <div class="col-sm-7">
+      <h4 class="card-text" style="color: #5C2799">Cards</h4>
     </div>
     <div class="col-sm-2">
       <button class="card-button">New Physical Card</button>
     </div>
     <div class="col-sm-2">
-      <button class="card-button">New Virtual Card</button>
+      <button class="card-btn">New Virtual Card</button>
     </div>
   </div>
   <div class="row">
@@ -15,7 +15,7 @@
       <mat-tab-group>
         <mat-tab label="Virtual Cards" > Virtual Card Content</mat-tab>
         <mat-tab label="Physical Cards">
-          <div class="row  mx-auto pt-4 pb-3">
+          <div class="row mx-auto pt-4 pb-0">
             <div class="col-lg-6 col-md-6 col-sm-10">
               <mat-form-field appearance="outline" style=" font-family: Ubuntu, sans-serif; width: 250px;" class="rounded-top">
                 <input matInput placeholder="  Search" [(ngModel)]="searchText"/>
@@ -23,10 +23,35 @@
               </mat-form-field>
             </div>
           </div>
-          <div>
-            <hr style="border: 1px solid #011627; opacity: 20%"/>
-            <div class="row">
-              <div class="col-sm">
+          <div >
+            <hr />
+            <div class="row mx-auto">
+              <div class="col-sm-2">
+                <div class="card"  style="height: 80px; width: 150px; border-radius: 6px; background: linear-gradient(128.39deg, rgba(0, 0, 0, 0.6) -29.7%, #000000 16.11%); color: #FFFFFF">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-sm">
+                        <span class="text-right amount">N1,000,000</span>
+                      </div>
+                    </div>
+                    <div class="row mt-2">
+                      <div class="col-sm-6 text-left card-code">*5439</div>
+                      <div class="col-sm-6">
+                        <img src="assets/verve%20logo.png" style="background-color: #FFFFFF"/>
+                      </div>
+                    </div>
+                  </div>
+                </div><br/>
+                <a routerLink="" style="margin-left: 5px; color: #5C2799">View Details</a>
+              </div>
+              <div class="col-sm-1 mt-1 classWithPad">
+                <button mat-button style="background: #5C2799; color: #FFFFFF;">Fund Card</button>
+              </div>
+              <div class="col-sm-1 mt-1 classWithPad">
+                <button mat-flat-button style="color: #5C2799;">Freeze Card</button>
+              </div>
+              <div class="col-sm-1 mt-1 classWithPad">
+                <button mat-flat-button style="color: #E4445D;" >Delete Card</button>
               </div>
             </div>
           </div>
