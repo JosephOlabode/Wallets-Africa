@@ -23,7 +23,7 @@
               </mat-form-field>
             </div>
           </div>
-          <div >
+          <div *ngFor="let card of cards" >
             <hr />
             <div class="row mx-auto">
               <div class="col-sm-2">
@@ -31,13 +31,15 @@
                   <div class="card-body">
                     <div class="row">
                       <div class="col-sm">
-                        <span class="text-right amount">N1,000,000</span>
+                        <span class="text-right amount">{{card.cardBalance | currency: card.cardCurrency}}</span>
                       </div>
                     </div>
                     <div class="row mt-2">
-                      <div class="col-sm-6 text-left card-code">*5439</div>
+                      <div class="col-sm-6 text-left card-code">*{{card.cardNumber.slice(card.cardNumber.length - 4)}}</div>
                       <div class="col-sm-6">
-                        <img src="assets/verve%20logo.png" style="background-color: #FFFFFF"/>
+                        <img *ngIf= "card.cardType.toLowerCase() == 'verve'" src="assets/verve%20logo.png" style="background-color: #FFFFFF"/>
+                        <img *ngIf= "card.cardType.toLowerCase() == 'visa'" src="assets/visa-curved-min.jpg" style="background-color: #FFFFFF"/>
+                        <img *ngIf= "card.cardType.toLowerCase() == 'mastercard'" src="assets/Master-Card-Blue-icon.jpg" style="background-color: #FFFFFF"/>
                       </div>
                     </div>
                   </div>
