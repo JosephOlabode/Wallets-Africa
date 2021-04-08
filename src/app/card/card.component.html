@@ -115,7 +115,7 @@
     <table class="table table-striped">
       <thead>
       <tr>
-        <th scope="col">#</th>
+        <!--<th scope="col">#</th>-->
         <th scope="col">BILLER</th>
         <th scope="col">AMOUNT</th>
         <th scope="col">DATE</th>
@@ -123,7 +123,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let transaction of selectedCard.transactions; index as i">
-        <th scope="row">{{ i + 1 }}</th>
+        <!--<th scope="row">{{ i + 1 }}</th>-->
         <td>{{transaction.narration}}</td>
         <td>{{transaction.amount | currency: selectedCard.cardCurrency }}</td>
         <td>{{transaction.transactionDate | customDatePipe}}</td>
