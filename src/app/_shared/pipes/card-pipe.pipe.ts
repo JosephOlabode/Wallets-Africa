@@ -10,9 +10,9 @@ export class CardPipePipe implements PipeTransform {
     if (!items) { return []; }
     if (!searchText) { return items; }
 
-    searchText = searchText.toLowerCase();
+    const searchTextLowerCase = searchText.toLowerCase();
     return items.filter( (item) => {
-      return item.name.toLowerCase().includes(searchText);
+      return item.cardNumber.toLowerCase().includes(searchTextLowerCase);
     });
   }
 
