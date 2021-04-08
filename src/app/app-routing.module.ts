@@ -5,7 +5,7 @@ import {UsersComponent} from './users/users.component';
 import {SendMoneyComponent} from './send-money/send-money.component';
 import {RequestMoneyComponent} from './request-money/request-money.component';
 import {AirtimeComponent} from './airtime/airtime.component';
-import {BillsComponent} from './_shared/pipes/bills/bills.component';
+import {BillsComponent} from './bills/bills.component';
 import {CardComponent} from './card/card.component';
 import {ReportsComponent} from './reports/reports.component';
 import {DocumentationComponent} from './documentation/documentation.component';
