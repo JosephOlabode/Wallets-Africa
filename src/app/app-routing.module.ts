@@ -9,6 +9,7 @@ import {BillsComponent} from './bills/bills.component';
 import {CardComponent} from './card/card.component';
 import {ReportsComponent} from './reports/reports.component';
 import {DocumentationComponent} from './documentation/documentation.component';
+import {SettingsComponent} from './settings/settings.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'reports',
     component: ReportsComponent
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent
   },
   {
     path: 'api-documentation',
