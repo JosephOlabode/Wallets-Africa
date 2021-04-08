@@ -614,8 +614,8 @@
 <mat-sidenav-container class="example-container" style="height: 100vh" >
   <mat-sidenav mode="side" opened #sidenav style="background: #5C2799;">
     <mat-nav-list >
-      <a class="link" mat-list-item [routerLink]="'/dashboard'"> Dashboard </a>
-      <a class="link" mat-list-item [routerLink]="'/send-money'">
+      <a class="link" mat-list-item [routerLink]="'/dashboard'" [routerLinkActive]="'visited'"> Dashboard </a>
+      <a class="link" mat-list-item [routerLink]="'/send-money'" [routerLinkActive]="'visited'">
         Send Money
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
           <mat-icon>keyboard_arrow_right</mat-icon>
@@ -635,11 +635,11 @@
           </button>
         </mat-menu>
       </a>
-      <a class="link" mat-list-item [routerLink]="'/request-money'"> Request Money </a>
-      <a class="link" mat-list-item [routerLink]="'/buy-airtime'"> Buy Airtime </a>
-      <a class="link" mat-list-item [routerLink]="'/pay-bills'"> Pay Bills</a>
-      <a class="link" mat-list-item [routerLink]="'/card'"> Card </a>
-      <a class="link" mat-list-item [routerLink]="'/reports'">
+      <a class="link" mat-list-item [routerLink]="'/request-money'" [routerLinkActive]="'visited'"> Request Money </a>
+      <a class="link" mat-list-item [routerLink]="'/buy-airtime'" [routerLinkActive]="'visited'"> Buy Airtime </a>
+      <a class="link" mat-list-item [routerLink]="'/pay-bills'" [routerLinkActive]="'visited'"> Pay Bills</a>
+      <a class="link" mat-list-item [routerLink]="'/card'" [routerLinkActive]="'visited'"> Card </a>
+      <a class="link" mat-list-item [routerLink]="'/reports'" [routerLinkActive]="'visited'">
         Reports
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
           <mat-icon>keyboard_arrow_right</mat-icon>
@@ -659,7 +659,7 @@
           </button>
         </mat-menu>
       </a>
-      <a class="link" mat-list-item [routerLink]="'/api-documentation'"> Api Documentation </a>
+      <a class="link" mat-list-item [routerLink]="'/api-documentation'" [routerLinkActive]="'visited'"> Api Documentation </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
