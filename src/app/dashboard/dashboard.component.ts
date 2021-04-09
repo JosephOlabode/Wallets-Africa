@@ -8,7 +8,7 @@ import {
   Input,
   AfterViewChecked,
   ChangeDetectorRef,
-  ViewRef
+  ViewRef, ViewChild
 } from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 @Component({
@@ -22,7 +22,10 @@ export class DashboardComponent implements OnInit, AfterViewInit{
   pageSize = 0;
   transactions = TRANSACTIONS.allTransactions;
 
-  constructor(private modalService: NgbModal, private changeDetector: ChangeDetectorRef) {
+  @ViewChild('defaultTabButtons')
+  private defaultTabButtonsTpl!: TemplateRef<any>;
+
+  constructor(private modalService: NgbModal) {
     this.loadMoreTransactions();
   }
   ngOnInit(): void {

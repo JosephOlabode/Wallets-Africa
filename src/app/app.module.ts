@@ -29,7 +29,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CustomDatePipePipe } from './_shared/pipes/custom-date-pipe.pipe';
 import { SettingsComponent } from './settings/settings.component';
 import { CardPipePipe } from './_shared/pipes/card-pipe.pipe';
-
+import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,6 +61,7 @@ import { CardPipePipe } from './_shared/pipes/card-pipe.pipe';
     MatMenuModule,
     MatTabsModule,
     MatInputModule,
+    MatExpansionModule,
     FormsModule,
     NgbModule
   ],
