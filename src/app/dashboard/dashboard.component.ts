@@ -48,21 +48,48 @@ export class DashboardComponent implements OnInit, AfterViewInit{
       .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
   }
 
+  /*
+  * Assuming TransactionType values
+  * 1 => Credit
+  * 2 => Debit
+  * */
+
   // tslint:disable-next-line:typedef
   getTotalAmountSpent() {
     let totalAmount = 0;
     this.totalTransactions.forEach(transaction => {
-      totalAmount += transaction.amount;
+      if (transaction.transactionType === 2) {
+        totalAmount += transaction.amount;
+      }
+    });
+    return totalAmount;
+  }
+
+  // tslint:disable-next-line:typedef
+  getTotalAmountReceived() {
+    let totalAmount = 0;
+    this.totalTransactions.forEach(transaction => {
+      if (transaction.transactionType === 1) {
+        totalAmount += transaction.amount;
+      }
     });
     return totalAmount;
   }
   // tslint:disable-next-line:typedef
   getTotalBalance() {
-    let totalBalance = 0;
+    let totalCreditBalance = 0;
+    let totalDebitBalance = 0;
     this.totalTransactions.forEach(transaction => {
-      totalBalance += transaction.balance;
+      if (transaction.transactionType === 1){
+        totalCreditBalance += transaction.balance;
+      }
+      else {
+        totalDebitBalance += transaction.balance;
+      }
     });
-    return totalBalance;
+
+    const accountBalance = totalCreditBalance - totalDebitBalance;
+    return accountBalance;
   }
 }
 
