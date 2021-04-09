@@ -6,7 +6,10 @@
           <div class="row">
             <div class="col-sm " >
               <span class= "title" style="color: #FFFFFF;text-align: left;">YOUR WALLET BALANCE</span><br>
-              <span style="color: #00C9B6; font-size: 36px;line-height: 43px;letter-spacing: 0em;text-align: left;">&#8358;150,000,000.88</span><br/><br/>
+              <span style="color: #00C9B6; font-size: 36px;line-height: 43px;letter-spacing: 0em;text-align: left;">
+                <!--&#8358;150,000,000.88-->
+                {{getTotalBalance() |  currency :'NGN':'symbol':'1.2-2'}}
+              </span><br/><br/>
               <div class="row">
                 <div class="col-sm">
                   <button class="icon-button"><span class="icon-button-text">0003480384 <i class="fa fa-info-circle" style="font-size: 14px"></i></span></button>

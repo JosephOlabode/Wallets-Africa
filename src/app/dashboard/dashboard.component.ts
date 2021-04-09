@@ -56,6 +56,14 @@ export class DashboardComponent implements OnInit, AfterViewInit{
     });
     return totalAmount;
   }
+  // tslint:disable-next-line:typedef
+  getTotalBalance() {
+    let totalBalance = 0;
+    this.totalTransactions.forEach(transaction => {
+      totalBalance += transaction.balance;
+    });
+    return totalBalance;
+  }
 }
 
 const TRANSACTIONS = {
