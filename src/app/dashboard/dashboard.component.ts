@@ -1,16 +1,6 @@
-import {
-  Inject,
-  Component,
-  OnInit,
-  AfterViewInit,
-  ElementRef,
-  TemplateRef,
-  Input,
-  AfterViewChecked,
-  ChangeDetectorRef,
-  ViewRef, ViewChild
-} from '@angular/core';
+import {AfterViewInit, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -88,8 +78,7 @@ export class DashboardComponent implements OnInit, AfterViewInit{
       }
     });
 
-    const accountBalance = totalCreditBalance - totalDebitBalance;
-    return accountBalance;
+    return totalCreditBalance - totalDebitBalance;
   }
 }
 
