@@ -79,7 +79,7 @@
               </thead>
               <tbody>
               <tr *ngFor="let transaction of transactions">
-                <td>{{transaction.date}}</td>
+                <td>{{transaction.date| date: 	'dd/MM/yy, h:mm:ss a'}}</td>
                 <td>{{transaction.category}}</td>
                 <td>{{ transaction.reference }}</td>
                 <td>{{transaction.narration}}</td>

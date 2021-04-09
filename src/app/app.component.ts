@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'Wallets-Africa';
   menu = false;
   navbarOpen = true;
+  notify = false;
   constructor() {
   }
 
@@ -22,5 +23,17 @@ export class AppComponent {
   }
   // tslint:disable-next-line:typedef
   logOut() {
+  }
+  // tslint:disable-next-line:typedef
+  toggleNotify() {
+    this.notify = !this.notify;
+  }
+  // tslint:disable-next-line:typedef
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
+  // tslint:disable-next-line:typedef
+  closeNavBar() {
+    this.navbarOpen = false;
   }
 }
