@@ -1,7 +1,11 @@
 <mat-sidenav-container class="example-container" style="height: 100vh" >
   <mat-sidenav mode="side" opened #sidenav style="background: #5C2799;">
     <mat-nav-list >
-      <a class="link" mat-list-item [routerLink]="'/dashboard'" [routerLinkActive]="'visited'"> Dashboard </a>
+      <!--<img class="ml-3 mt-3" src="assets/Vector.png"/>-->
+      <div class="text-center ml-3 mt-3" style="border: 1px solid white; height: 50px; width: 50px; border-radius: 50%; background-color: #FFFFFF">
+        <img class="mt-3" src="assets/Vector%20(1).png"/>
+      </div>
+      <a class="link mt-3" mat-list-item [routerLink]="'/dashboard'" [routerLinkActive]="'visited'"> Dashboard </a>
       <a class="link" mat-list-item [routerLink]="'/send-money'" [routerLinkActive]="'visited'">
         Send Money
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
