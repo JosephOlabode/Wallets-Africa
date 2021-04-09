@@ -22,8 +22,8 @@ export class DashboardComponent implements OnInit, AfterViewInit{
   pageSize = 0;
   transactions = TRANSACTIONS.allTransactions;
 
-  @ViewChild('defaultTabButtons')
-  private defaultTabButtonsTpl!: TemplateRef<any>;
+  @ViewChild('longContent')
+  private longContent!: TemplateRef<any>;
 
   constructor(private modalService: NgbModal) {
     this.loadMoreTransactions();
@@ -31,13 +31,13 @@ export class DashboardComponent implements OnInit, AfterViewInit{
   ngOnInit(): void {
   }
 
+  ngAfterViewInit(): void {
+    this.openLg(this.longContent);
+  }
+
   // tslint:disable-next-line:typedef
   openLg(content: any) {
     this.modalService.open(content, { size: 'lg', centered: true });
-  }
-
-  ngAfterViewInit(): void {
-
   }
 
   // tslint:disable-next-line:typedef
