@@ -6,7 +6,7 @@
         <img class="mt-3" src="assets/Vector%20(1).png"/>
       </div>
       <a class="link mt-3" mat-list-item [routerLink]="'/dashboard'" [routerLinkActive]="'visited'"> Dashboard </a>
-      <!--<a class="link" mat-list-item [routerLink]="'/send-money'" [routerLinkActive]="'visited'">
+      <a class="link" mat-list-item [routerLink]="'/send-money'" [routerLinkActive]="'visited'">
         Send Money
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
           <mat-icon>keyboard_arrow_right</mat-icon>
@@ -26,11 +26,11 @@
           </button>
         </mat-menu>
 
-      </a>-->
-      <!--<mat-accordion class="app-nav-accordion">
+      </a>
+      <!--<mat-accordion class="app-nav-accordion" style="background-color: #5C2799">
         <mat-expansion-panel class="mat-elevation-z0">
           <mat-expansion-panel-header>
-            <mat-panel-title>Section Two</mat-panel-title>
+            <mat-panel-title>Send Money</mat-panel-title>
           </mat-expansion-panel-header>
           <mat-nav-list>
             <a mat-list-item>Item Three</a>
@@ -40,7 +40,7 @@
       </mat-accordion>-->
 
       <!--This is the accordion from the ng modal-->
-      <ngb-accordion [closeOthers]="true" activeIds="static-1">
+      <!--<ngb-accordion [closeOthers]="true" activeIds="static-1" style="background-color: #5C2799">
         <ngb-panel id="static-1" title="Simple">
           <ng-template ngbPanelContent>
             <mat-nav-list>
@@ -49,7 +49,7 @@
             </mat-nav-list>
           </ng-template>
         </ngb-panel>
-      </ngb-accordion>
+      </ngb-accordion>-->
       <a class="link" mat-list-item [routerLink]="'/request-money'" [routerLinkActive]="'visited'"> Request Money </a>
       <a class="link" mat-list-item [routerLink]="'/buy-airtime'" [routerLinkActive]="'visited'"> Buy Airtime </a>
       <a class="link" mat-list-item [routerLink]="'/pay-bills'" [routerLinkActive]="'visited'"> Pay Bills</a>
