@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit, AfterViewInit{
   page = 1;
   pageSize = 0;
   transactions = TRANSACTIONS.allTransactions;
-
+  totalTransactions = TRANSACTIONS.allTransactions;
   @ViewChild('longContent')
   private longContent!: TemplateRef<any>;
 
@@ -46,6 +46,15 @@ export class DashboardComponent implements OnInit, AfterViewInit{
     this.transactions = TRANSACTIONS.allTransactions
       .map((transaction, i) => ({id: i + 1, ...transaction}))
       .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
+  }
+
+  // tslint:disable-next-line:typedef
+  getTotalAmountSpent() {
+    let totalAmount = 0;
+    this.totalTransactions.forEach(transaction => {
+      totalAmount += transaction.amount;
+    });
+    return totalAmount;
   }
 }
 
